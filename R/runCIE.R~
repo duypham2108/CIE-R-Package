@@ -5,6 +5,7 @@ require(doParallel)
 require(parallel)
 require(multidplyr)
 require(rjson)
+require(MEAL)
 
 #' Run Causual Inference Enrichment
 #'
