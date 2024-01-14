@@ -578,7 +578,7 @@ generateHypTabs <- function(ents, rels, evidence, verbose=TRUE,
                     | (val != 0 & type == 'conflict'), na.rm=T),
             incorrect.pred = 
                 sum((val == -1 & type == 'increase') | (val == 1 & type == 'decrease') , na.rm=T),
-            total.reachable = n(),
+            total.reachable = dplyr::n(),
             significant.reachable = sum(val != 0, na.rm=T),
             total.ambiguous = length(type == 'conflict'),
             significant.ambiguous = sum(val != 0 & type == 'conflict', na.rm=T),
