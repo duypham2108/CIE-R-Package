@@ -585,7 +585,7 @@ generateHypTabs <- function(ents, rels, evidence, verbose=TRUE,
                              value=value)
     }
     D <- intoGroups %>% 
-        summarise(
+        dplyr::summarize(
             npp = sum(val == 1 & type == 'increase', na.rm=T),
             npm = sum(val == -1 & type == 'increase', na.rm=T),
             npz = sum(val == 0 & type == 'increase', na.rm=T),
