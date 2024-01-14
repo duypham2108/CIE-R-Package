@@ -258,7 +258,7 @@ parseChIP <- function(tsv_dir, processToFilterLater=FALSE){
         YY <- select(org.Hs.eg.db, keys=ChIP.ents.mRNA$name,
                      columns=c("SYMBOL", "ENTREZID"), keytype="SYMBOL")
   
-  #YY.counts <- YY %>% group_by(SYMBOL) %>% summarise(n = n()) 
+  #YY.counts <- YY %>% group_by(SYMBOL) %>% dplyr::summarise(n = n()) 
   #YY <- left_join(YY, YY.counts)
   #YY %>% filter(n > 1)
   
