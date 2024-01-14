@@ -276,7 +276,7 @@ runEnrichment <- function(ents, rels, DGEtable, verbose, hypTabs, method,
     }
     else {
         enrichment <- generateHypTabs2(ents,rels, DGEtable, verbose=verbose,
-                                       method=method, numCores=numCores)
+                                       method=method)
         index <- grep("pval|pvalue|p.value|p-value|p-val|p.val", colnames(enrichment))
         index <- unlist(index)
         if(length(index) == 0) {
